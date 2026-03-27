@@ -444,7 +444,8 @@ class TextformatterVideoEmbed extends Textformatter implements ConfigurableModul
 		
 		// perform fast check before performing regex check
 		if(strpos($str, '://www.youtube.com/watch') === false 
-			&& strpos($str, '://www.youtube.com/v/') === false 
+			&& strpos($str, '://www.youtube.com/v/') === false
+			&& strpos($str, '://youtube.com/shorts/') === false
 			&& strpos($str, '://youtu.be/') === false) return;
 
 		// 1: full URL, 2:video id, 3: query string (optional)
